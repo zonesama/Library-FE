@@ -1,0 +1,35 @@
+<div class="card my-5">
+  <div class="col-form-label" style="text-shadow: blue 2px 2px 6px; font-weight: bolder; margin-left: 15px">
+    Book List
+  </div>
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Author</th>
+        <th scope="col">Price</th>
+        <th scope="col">Category</th>
+        <th scope="col">Description</th>
+        <th scope="col">Image</th>
+        <th></th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of bookList">
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{item.author}}</td>
+        <td>{{ item.price }}</td>
+        <td>{{item.category.name}}</td>
+        <td>{{item.description}}</td>
+        <td><img src="{{item.image}}" style="height: 250px; width: 150px;"></td>
+        <td><button class="btn btn-info" type="button" (click)="goToEditBook(item)">Edit</button></td>
+        <td><button class="btn btn-danger" type="button" (click)="deleteBook(item)">Delete</button></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
