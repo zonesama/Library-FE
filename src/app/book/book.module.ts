@@ -7,14 +7,15 @@ import {BookRouting} from './book-routing';
 import {CategoryService} from '../category/category.service';
 import {BookService} from './book.service';
 import {RouterModule} from '@angular/router';
-import { NewBookComponent } from './new-book/new-book.component';
-import { UpdateBookComponent } from './update-book/update-book.component';
+import {NewBookComponent} from './new-book/new-book.component';
+import {UpdateBookComponent} from './update-book/update-book.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 
 @NgModule({
   declarations: [BookListComponent, NewBookComponent, UpdateBookComponent],
   imports: [
-    CommonModule, FormsModule, ReactiveFormsModule, HttpClientModule, BookRouting, RouterModule
+    CommonModule, FormsModule, ReactiveFormsModule, HttpClientModule, BookRouting, RouterModule, NgxPaginationModule
   ],
   providers: [CategoryService, BookService]
 })

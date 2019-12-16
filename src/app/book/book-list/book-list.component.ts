@@ -12,7 +12,8 @@ import {CategoryService} from '../../category/category.service';
 })
 export class BookListComponent implements OnInit {
   bookList: Book[];
-
+  p = 1;
+  count = 3;
   constructor(private bookService: BookService,
               private router: Router,
               private dataTransferService: DataTransferService,
@@ -37,7 +38,7 @@ export class BookListComponent implements OnInit {
   deleteBook(item: Book) {
     if (confirm('Are You Sure?')) {
       this.bookService.deleteBook(item.id).subscribe(result => {
-        alert('Deleted Book: ' + result.id + ', name: ' + result.name);
+        alert('Deleted Book with ID: ' + result.id + ', name: ' + result.name);
         this.refreshBookList();
       });
     }

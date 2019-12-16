@@ -8,13 +8,14 @@ import {CategoryService} from './category.service';
 import {CategoryRountingModule} from './category-rounting';
 import { NewCategoryComponent } from './new-category/new-category.component';
 import { CategoryUpdateComponent } from './category-update/category-update.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 
 @NgModule({
   declarations: [CategoryListComponent, NewCategoryComponent, CategoryUpdateComponent],
-  imports: [
-    CommonModule, HttpClientModule, FormsModule, ReactiveFormsModule, RouterModule, CategoryRountingModule
-  ],
+    imports: [
+        CommonModule, HttpClientModule, FormsModule, ReactiveFormsModule, RouterModule, CategoryRountingModule, NgxPaginationModule
+    ],
   providers: [CategoryService]
 })
 export class CategoryModule {

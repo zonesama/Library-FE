@@ -1,4 +1,4 @@
-<form [formGroup]="bookForm" (ngSubmit)="onSubmit()" class="col-8 offset-3">
+<form [formGroup]="bookForm" (ngSubmit)="onSubmit()" class="col-8 offset-3" style="margin-top: 50px">
   <div class="form-group row">
     <label class="col-2 col-form-label">Name:</label>
     <div class="col-10">
@@ -34,14 +34,13 @@
   <div class="form-group row">
     <label class="col-2 col-form-label">Image:</label>
     <div class="col-10">
-      <img src="{{currentImg}}" style="height: 250px;width: 150px">
-      <br>
-      <input class="form-control" type="text" formControlName="image" (change)="onChangeImg($event)">
+      <img src="{{currentImg}}" style="height: 300px;width: 200px">
+      <input class="form-control" type="text" formControlName="image" (change)="onChangeImg($event)" style="margin-top: 20px">
     </div>
   </div>
   <div class=" row col-2 offset-3">
     <button type="submit">Submit</button>
-    <button type="button" routerLink="/book">Back</button>
+    <button type="button" routerLink="/book" style="margin-top: 25px">Back</button>
   </div>
 </form>
 

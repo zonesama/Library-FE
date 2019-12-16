@@ -10,7 +10,9 @@ import {DataTransferService} from '../../data-transfer.service';
   styleUrls: ['./category-list.component.scss']
 })
 export class CategoryListComponent implements OnInit {
-  private categoryList: Category[];
+  categoryList: Category[];
+  p = 1;
+  count = 3;
 
   constructor(private router: Router,
               private categoryService: CategoryService,

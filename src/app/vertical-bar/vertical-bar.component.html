@@ -1,0 +1,42 @@
+<ul class="nav flex-column" style="margin-top: 65px">
+  <li class="nav-item">
+    <div class="accordion" id="accordionExample">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              Book
+            </button>
+          </h2>
+        </div>
+
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body">
+            <a class="dropdown-item" routerLink="/book">Book List</a>
+            <a class="dropdown-item" routerLink="/book/newBook">Add Book</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="nav-item">
+    <div class="accordion" id="accordionExample1">
+      <div class="card">
+        <div class="card-header" id="headingOne1">
+          <h2 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne1" aria-expanded="false" aria-controls="collapseOne">
+              Category
+            </button>
+          </h2>
+        </div>
+
+        <div id="collapseOne1" class="collapse" aria-labelledby="headingOne1" data-parent="#accordionExample">
+          <div class="card-body">
+            <a class="dropdown-item" [routerLink]="['category']">Category List</a>
+            <a class="dropdown-item" routerLink="/category/newCategory">Add Category</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>

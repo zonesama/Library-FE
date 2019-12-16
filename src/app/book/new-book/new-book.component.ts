@@ -29,7 +29,7 @@ export class NewBookComponent implements OnInit {
       price: [''],
       description: [''],
       image: [''],
-      category: [''],
+      category: ['']
     });
   }
 
@@ -44,6 +44,12 @@ export class NewBookComponent implements OnInit {
       alert('Added Book: ' + result.name);
       this.router.navigateByUrl('/book');
     });
+    // const formData = new FormData();
+    // formData.append('book', JSON.stringify(this.bookForm.value));
+    // this.bookService.addBookV2(formData).subscribe(result => {
+    //   alert('Added Book: ' + result.name);
+    //   this.router.navigateByUrl('/book');
+    // });
   }
 
   onChangeImg(event) {
